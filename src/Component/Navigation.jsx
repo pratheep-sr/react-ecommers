@@ -7,10 +7,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom'
 import logo from '../assets/image/logo.jpg'
+import { CgProfile } from "react-icons/cg";
 
 function Navigation(){
 
-let [store,setstore]= useState(false)
+let [store,setstore]= useState(false);
 
 
     return(
@@ -21,16 +22,15 @@ let [store,setstore]= useState(false)
         <Navbar.Collapse id="navbarScroll"   style={{ justifyContent:'center' }}>
           <Nav
             
-            style={{ maxHeight: '100px', justifyContent:'center' }}
+            style={{ maxHeight: '200px', justifyContent:'center' }}
             navbarScroll 
           >
             <Nav.Link as={Link} to='/'  >Home</Nav.Link>
             <Nav.Link as={Link} to='/About' >About </Nav.Link>
 
 
-            <NavDropdown   title={
-                <Link className='text-dec' to="/Ourproducts">Our Products </Link>
-            } id="navbarScrollingDropdown"
+            <NavDropdown   title="Ourproducts"
+             id="navbarScrollingDropdown"
            show={store}
            onMouseOver={()=>{return setstore(true)}}
            onMouseLeave={()=>{return  setstore(false)}}
@@ -50,6 +50,7 @@ let [store,setstore]= useState(false)
           </Nav>
           
         </Navbar.Collapse>
+        <CgProfile className='profile' />
         <Form className="d-flex1" >
             <Form.Control
               type="search"

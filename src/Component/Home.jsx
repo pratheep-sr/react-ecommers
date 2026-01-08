@@ -1,10 +1,14 @@
-import Navigation from  './Navigation'
+import Navigation from  './Navigation';
+import Carosul from './carosul';
+import Aboutsection from './Aboutsection';
 
 function Home(){
 return(
     <>
     <Navigation/>
-    <h1>Home pages - process</h1>
+    <Carosul/>
+    <Aboutsection />
+
     </>
 
 
