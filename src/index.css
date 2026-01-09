@@ -66,6 +66,12 @@
         color: #cbcbcb;
       }
 
+         .carousel-caption {
+          
+          top:30%
+
+         }
+
 @media(max-width:1440px){
    .carousel-caption {
     top: 20% ;
@@ -115,7 +121,7 @@
     }
 }
 
-@media(max-width:425px){
+@media(max-width:444px){
   .carousel-caption h3{
 
     font-size: 12px;
@@ -128,8 +134,119 @@
     width: 60%;
     top: 10px;
    }
+      .carosulbutton1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+   }
+    .carosulbutton1{
+  position: relative ;
+right: 32% !important;
+        width: 38%;
+ }
+  
+  
 }
 
-section{
-  padding: 150px;
+
+@media(max-width:330px){
+ .carosulbutton{
+    font-size:8px !important;
+   }
+   .carousel-caption {
+    top:2px;
+   }
+   .carosulbutton1{
+              position: relative;
+        right: 27% !important;
+        width: 45%;
+   }
+        
+ 
+
+}
+
+
+/* about component */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ gap:40px;
+ padding: 60px 8%;
+}
+
+.about-content{
+  flex:1;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.about-image{
+  flex:1;
+  text-align: center;
+}
+.about-image img{
+  width: 100%;
+  max-width: 420px;
+   border-radius: 12px;
+}
+
+.about-content h1{
+  font-size: 50px;
+    padding-bottom: 15px;
+    color: rgb(115 42 60);
+}
+.about-content span{
+  color: rgb(236, 179, 37);
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0px !important;
+}
+.icons{
+      margin-right: 10px;
+    font-size: 15px;
+    color: #e9ab11;
+}
+li{
+      padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column-reverse;
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .about-content p {  
+    font-size: 15px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+   .about-content p,h1 ,li {
+    
+    text-align: left;
+   }
+ .carosulbutton1{
+  position: relative;
+right: 40%;
+ }
+  
+}
+.carosulbutton1{
+right: 40%;
+  font-size: 20px !important;
 }

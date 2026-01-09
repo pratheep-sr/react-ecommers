@@ -41,7 +41,7 @@ function Carosul() {
           <Carousel.Caption>
             <h3>{slide.title}</h3>
             <p>{slide.subtitle}</p>
-            <Button style={{backgroundColor:hover ?"#ecb325" :"#ffffff",
+            <Button className="carosulbutton" style={{backgroundColor:hover ?"#ecb325" :"#ffffff",
                                border: "1px solid white",
                                color:hover ?"#ffffff" :"#000000"
              }} onMouseOver={()=>{sethover(false)}}
