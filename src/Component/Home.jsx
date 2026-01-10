@@ -1,5 +1,5 @@
 import Navigation from  './Navigation';
-import Carosul from './carosul';
+import Carosul from './Carosul';
 import Aboutsection from './Aboutsection';
 import Productsection from './Productsection';
 
