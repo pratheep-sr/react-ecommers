@@ -1,6 +1,7 @@
 import Navigation from  './Navigation';
 import Carosul from './carosul';
 import Aboutsection from './Aboutsection';
+import Productsection from './Productsection';
 
 
 function Home(){
@@ -9,6 +10,7 @@ return(
     <Navigation/>
     <Carosul/>
     <Aboutsection />
+    <Productsection/>
 
 
     </>

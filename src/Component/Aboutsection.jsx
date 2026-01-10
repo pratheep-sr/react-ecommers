@@ -36,7 +36,7 @@ function Aboutsection() {
       {aboutsection.map((about, index) => {
         return (
           <div key={index + 1} className="about-content">
-            <h1>{about.title} <span className="" >{about.title1}</span> </h1>
+            <h1>{about.title} <span  >{about.title1}</span> </h1>
             <p>{about.paragraph}</p>
             <ul>
               <li><FaChevronCircleRight  className="icons" />{about.heading}</li>
