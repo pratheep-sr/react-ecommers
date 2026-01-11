@@ -145,7 +145,17 @@
 right: 32% !important;
         width: 38%;
  }
-  
+  .section .why-choose .warp-section {
+    display: flex;
+    justify-content: start !important;
+    padding-bottom: 20px !important;
+}
+.left-padding1 {
+    padding-left: 0px !important;
+}
+  .left-padding {
+    padding-left:0px !important;
+}
   
 }
 
@@ -244,6 +254,24 @@ li{
   position: relative;
 right: 40%;
  }
+
+ .heading  h1{
+  text-align: center;
+  font-size: 40px !important;
+ }
+ .section .why-choose .warp-section {
+    display: flex;
+    justify-content: start !important;
+    padding-bottom: 30px !important;
+}
+.left-padding1 {
+    padding-left: 66px;
+}
+.image {
+    margin-top: 0px !important;
+    width: 300px;
+}
+
   
 }
 .carosulbutton1{
@@ -303,4 +331,41 @@ right: 40%;
     justify-content: center;
     gap: 40px;
     padding: 200px 8%;
+}
+.section .why-choose .warp-section {
+
+    display: flex;
+    justify-content: end;
+    padding-bottom: 50px;
+
+}
+
+.why-choose-icons{
+          font-size: 62px;
+    margin-top: -14px;
+    padding-right: 8px;
+    color: #e9ab11;
+}
+.image{
+      margin-top: 130px;
+    width: 300px;
+}
+.left-padding{
+
+  padding-left: 66px;
+}
+.heading2{
+      padding-bottom: 68px;
+}
+.warp-section h4{
+color: #732a3c;
+}
+
+.heading  h1{
+   font-size: 50px;
+    padding-bottom: 15px;
+    color: rgb(115 42 60);
+}
+span{
+  color: #e9ab11;
 }
