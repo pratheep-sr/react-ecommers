@@ -4,79 +4,92 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Testmonial(){
 
+const testmonial = [
+  { 
+    id: 1, 
+    name: "Arun Kumar", 
+    paragraph: "The quality of the dry fruits is truly excellent. Every product tastes fresh, feels premium, and is packed with great care. The packaging is neat, and the overall experience feels trustworthy and professional." 
+  },
+  { 
+    id: 2, 
+    name: "Priya Sharma", 
+    paragraph: "I was really impressed with the hygienic packaging and the quick delivery service. The dry fruits were fresh, flavorful, and perfectly sealed, which made me confident about ordering again." 
+  },
+  { 
+    id: 3, 
+    name: "Karthik Raj", 
+    paragraph: "The taste and quality are absolutely authentic and premium. My entire family enjoyed the products, and we could feel the freshness in every bite. Definitely one of the best choices online." 
+  },
+  { 
+    id: 4, 
+    name: "Meena Devi", 
+    paragraph: "This is one of the best online stores for dry fruits that I have tried so far. The products are fresh, pricing is fair, and the overall service experience is smooth and reliable." 
+  },
+  { 
+    id: 5, 
+    name: "Suresh Babu", 
+    paragraph: "The flavor is rich and the freshness is clearly noticeable. Every product feels carefully selected and well packed. I am completely satisfied with the quality and will surely place more orders." 
+  },
+  { 
+    id: 6, 
+    name: "Divya", 
+    paragraph: "These dry fruits are a healthy and tasty snack option for my children. The quality is consistently good, the taste is natural, and I feel confident serving them to my family daily." 
+  }
+];
 
-      const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  };
-    let testmonial=[
-        {
-            id:1,
-            name:"Ramesh K – Chennai",
-            paragraph:"The snacks are extremely fresh and crispy. The mixture and murukku tasted just like homemade. Highly satisfied with the quality!"
 
-        },
-          {
-            id:2,
-            name:"Priya S – Coimbatore",
-            paragraph:"Beautiful packaging and excellent taste. My kids loved the sweets and snacks. Will definitely order again."
-
-        },
-          {
-            id:3,
-            name:"Arun M – Bangalore",
-            paragraph:"Authentic flavor and great variety. It feels like eating traditional snacks from my hometown."
-        },
-          {
-            id:4,
-            name:"Arun M – Bangalore",
-            paragraph:"Authentic flavor and great variety. It feels like eating traditional snacks from my hometown."
-        },
-          {
-            id:5,
-            name:"Arun M – Bangalore",
-            paragraph:"Authentic flavor and great variety. It feels like eating traditional snacks from my hometown."
+  const settings = {
+   dots: true,
+  arrows: true,     // must be true
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,   // Tablet
+        settings: {
+          slidesToShow: 2
         }
+      },
+      {
+        breakpoint: 600,    // Mobile
+        settings: {
+          slidesToShow: 1   // Only ONE visible on mobile
+        }
+      }
     ]
+  };
 
-    return(
-        <>
-        <section className="section bg">
+  return (
+    <section className="section1 bg">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-12 heading heading2">
-            <h1>
-           Taste the Heritage in  <span> Every Bite </span>
-            </h1>
 
-            <p>
-              Experience rich traditional flavors crafted from timeless recipes.
-            </p>
-          </div>
+        <div className="heading heading2">
+          <h1>
+            What Our <span>Customers Say </span>
+          </h1>
+          <p>
+            Hear from our happy customers who love the freshness, quality, and authentic taste of our premium dry fruits.
+          </p>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-             <Slider {...settings}>
-          {testmonial.map((test)=>{
-          return(
-              <div key={test.id} className=" col-lg-4 space-testmonial">
-                <p>{test.paragraph}</p>
-                <h5>{test.name}</h5>
+
+        <Slider {...settings} >
+          {testmonial.map((test) => (
+            <div key={test.id}>
+              <div className="space-testmonial">
+                <p>"{test.paragraph}"</p>
+                <h5>- {test.name}</h5>
+              </div>
             </div>
-          )
+          ))}
+        </Slider>
 
-          })}
-          </Slider>
-        </div>
-        </div>
-     </section>
-        </>
-    )
-
+      </div>
+    </section>
+  );
 }
 
 export default Testmonial;

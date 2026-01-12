@@ -4,6 +4,7 @@ import Aboutsection from './Aboutsection';
 import Productsection from './Productsection';
 import Whychooses from './Whychooses';
 import Testmonial from './Testmonial';
+import Calltoaction from './Calltoaction';
 
 
 function Home(){
@@ -14,6 +15,7 @@ return(
     <Aboutsection />
     <Productsection/>
     <Whychooses/>
+    <Calltoaction/>
     <Testmonial/>
 
 
