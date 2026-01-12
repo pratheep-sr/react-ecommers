@@ -69,7 +69,7 @@ function Whychooses() {
                 <PiFlowerLotus className="why-choose-icons" />
             <div>
                 <h4>Loved by customers across generations</h4>
-           <p>Loved and trusted by customers across generations.</p>
+           <p>Loved and trusted by</p>
             </div>
 
             </div>
