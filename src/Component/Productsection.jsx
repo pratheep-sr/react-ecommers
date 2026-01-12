@@ -33,11 +33,11 @@ return(
               <p>Explore our handpicked collection of snacks, sweets, and premium treats</p>
 
             </div>
-   { product.map((product)=>{
+   { product.map((product,index)=>{
      return(
-          <>
-          <div className='col-lg-3 col-sm-6 bottom-padding'>
-             <Card className='full-card' >
+        
+          <div className=' col-xl-3 col-lg-4 col-sm-6  bottom-padding' key={product.id} >
+             <Card className='full-card'   >
       <Card.Img variant="top" src={product.image}
       style={{ height: "300px", objectFit: "cover" }}
        />
@@ -53,7 +53,7 @@ return(
       </Card.Footer>
     </Card>
           </div>
-          </>
+       
      )
   
 

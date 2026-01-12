@@ -101,6 +101,12 @@
     border: 0 !important;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !important;
 }
+    .image {
+    margin-top: 150px !important;
+    width: 260px !important ;
+}
+
+
       }
 
       .carousel-caption {
@@ -119,6 +125,7 @@
     .h3, h3 {
         font-size: 70px !important;
     }
+
 }
 
 @media(max-width:444px){
@@ -368,4 +375,16 @@ color: #732a3c;
 }
 span{
   color: #e9ab11;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+ .left-padding {
+    padding-left: 30px !important;
+}
+}
+.space-testmonial{
+      padding: 50px 25px;
+    text-align: center;
+    border-radius: 45px;
+    text-align: center;
+    background: white;
 }
