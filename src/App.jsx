@@ -5,9 +5,10 @@ import About from "./Component/About";
 import Ourproducts from "./Component/Ourproducts";
 import Combo from "./Component/Combo";
 import Contact from "./Component/Contact";
+import Karasev from "./Component/Karasev";
+import Cornmixture from "./Component/Cornmixture";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import WallNut from "./Component/Wallnut";
-import Drygrap from "./Component/Drygrap";
+
 
 const App = () => {
   return (
@@ -17,8 +18,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Ourproducts" element={<Ourproducts/>} />
-          <Route path="/WallNut" element={<WallNut/>} />
-          <Route path="/Drygrap" element={<Drygrap/>} />
+          <Route path="Karasev" element={<Karasev/>} />
+          <Route path="/Cornmixture" element={<Cornmixture/>} />
           <Route path="/Combo" element={<Combo />} />
           <Route path="/Contact" element={<Contact/>} />
           

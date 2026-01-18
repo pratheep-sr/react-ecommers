@@ -1,10 +1,19 @@
+
+import { Footer } from "./Footer";
 import Navigation from "./Navigation";
+import Breadcrumbs from "./breadcrumbs";
+import Contactsection from "./contact/Contactsection";
+
 
 function Contact(){
     return(
   <>
   <Navigation/>
-   <h1>Contact page </h1></>
+<Breadcrumbs title="Contact"/>
+<Contactsection />
+<Footer/>
+   
+   </>
     )
 }
 

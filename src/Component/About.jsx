@@ -1,10 +1,21 @@
 import Navigation from "./Navigation";
+import Aboutsection from "./Aboutsection"
+import Testmonial from "./Testmonial";
+import {Footer} from "./Footer";
+import Breadcrumbs from "./breadcrumbs";
+import Mission from "./mission";
 
 function About(){
     return(
        <>
         <Navigation/>
-        <h1>About page </h1></>
+        <Breadcrumbs title="About" />
+        <Aboutsection/>
+        <Mission/>
+        <Testmonial/>
+        <Footer/>
+         
+         </>
     )
 }
 

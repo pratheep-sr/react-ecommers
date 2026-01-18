@@ -1,4 +1,8 @@
+import Breadcrumbs from "./breadcrumbs";
+import Calltoaction from "./Calltoaction";
+import { Footer } from "./Footer";
 import Navigation from "./Navigation";
+import Productsection from "./Productsection";
 
 
 function Ourproducts(){
@@ -6,7 +10,10 @@ function Ourproducts(){
     return(
        <>
        <Navigation/>
-        <h1>Our Product</h1>
+        <Breadcrumbs title="Our Product" />
+        <Productsection/>
+        <Calltoaction/>
+        <Footer/>
        </>
     )
 }
