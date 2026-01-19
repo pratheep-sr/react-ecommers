@@ -4,6 +4,7 @@ import Testmonial from "./Testmonial";
 import {Footer} from "./Footer";
 import Breadcrumbs from "./breadcrumbs";
 import Mission from "./mission";
+import Cart from './Cart';
 
 function About(){
     return(
@@ -13,6 +14,7 @@ function About(){
         <Aboutsection/>
         <Mission/>
         <Testmonial/>
+        <Cart/>
         <Footer/>
          
          </>

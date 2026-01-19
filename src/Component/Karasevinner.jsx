@@ -80,7 +80,7 @@ function Karasevinner() {
                   <option value={"6kg"}>6Kg</option>
                   <option value={"7kg"}>7Kg</option>
                 </select>
-                <CiSquarePlus />
+                
               </div>
              <h5 className="price1"  > 1 Kg Jar • ₹85 | 2 Kg Jar • ₹150 | Freshly Prepared</h5>
              <h4 className="price">₹85.00</h4>

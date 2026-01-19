@@ -13,6 +13,11 @@ import { FaCartArrowDown } from "react-icons/fa";
 function Navigation() {
   let [store, setstore] = useState(false);
 
+  // cart popup function
+  function cartpopup(){
+    
+  }
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -60,7 +65,7 @@ function Navigation() {
           </Nav>
         </Navbar.Collapse>
         <CgProfile className="profile" />
-        <div className="cart-button">
+        <div className="cart-button" onClick={cartpopup()}>
           <Button variant="secondary" className="button">
             {" "}
             <FaCartArrowDown className="cart" />{" "}

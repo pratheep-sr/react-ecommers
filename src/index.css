@@ -571,6 +571,79 @@ textarea{
   width: 160px;
 }
 
+/* cart component css */
+.cart-section{
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+      width: 30%;
+
+}
+.body-cart{
+     display: flex;
+    justify-content:  space-between;
+    align-items: center;
+     padding: 0px 15px;
+     
+}
+.img-cart img {
+      width: 100px;
+}
+.header h2{
+  padding: 15px 0px;
+    text-align: center;
+    background: #68031d;
+    color: white;
+}
+.adding-cart p{
+ font-size: 11px;
+    width: 80%;
+    text-align: left;
+}
+.adding-cart .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 65px;
+}
+.adding-cart{
+  padding-left: 40px;
+  position: relative;
+}
+.delect-cart{
+      font-size: 27px;
+    padding-left: 10px;
+}
+.img-cart{
+      border: 1px solid #bababa;
+    padding: 5px;
+}
+.minus{
+ font-size: 17px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.adding-process{
+  border: 1px solid #bababa ;
+    padding: 2px 7px;
+}
+.adding-cart::after{
+  content: "";
+  position: absolute;
+    bottom: -12px;
+    left: -111px;
+    width: 153%;
+    height: 1px;
+    background: #bababa;
+}
+
+
+
 /* media query */
 
 @media(max-width:1440px){
