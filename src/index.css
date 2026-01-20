@@ -599,7 +599,9 @@ textarea{
      
 }
 .img-cart img {
-      width: 100px;
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
 }
 .header h2{
   padding: 15px 0px;
@@ -621,8 +623,9 @@ textarea{
     padding-right: 65px;
 }
 .adding-cart{
-  padding-left: 40px;
-  position: relative;
+ padding-left: 40px;
+    position: relative;
+    width: 70%;
 }
 .delect-cart{
       font-size: 27px;
@@ -652,9 +655,11 @@ textarea{
     background: #bababa;
 }
 .headerelement{
- display: flex;
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 80px;
+    padding: 0px 20px;
 }
 .headerelement svg{
   font-size: 40px;
@@ -683,7 +688,28 @@ body.total-cart{
   overflow: hidden !important;
 
 }
+.emptycart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70%;
+}
 
+
+   .cartfooter {
+   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #eeeea0;
+  position: fixed;
+  bottom: 1;
+  width: 100%;
+
+  
+  
+}
+
+     
 
 
 /* media query */

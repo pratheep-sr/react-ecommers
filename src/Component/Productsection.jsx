@@ -2,11 +2,20 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import custom from './customhook/custom';
 import { BlinkBlur } from 'react-loading-indicators';
-
+import {useDispatch} from 'react-redux'
+import {addcart,delectcart} from '../Component/store/cartmanage'
  
  function Productsection(){
    
-let{product,error,isloading} = custom("https://eccommers.onrender.com/product")
+let{product,error,isloading} = custom("https://eccommers.onrender.com/product");
+
+ let dispatch = useDispatch();
+
+function handleaddcart(product){
+dispatch(addcart(product))
+  
+}
+
 
 
 if(isloading){
@@ -48,7 +57,7 @@ return(
       </Card.Body>
       <Card.Footer className='card-footer'>
          <Card.Title className='price' >{product.price}</Card.Title>
-        <Button variant="primary">Add to Cart</Button>
+        <Button variant="primary" onClick={()=>{handleaddcart(product)}} >Add to Cart</Button>
       </Card.Footer>
     </Card>
           </div>

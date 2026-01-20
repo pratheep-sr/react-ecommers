@@ -1,4 +1,4 @@
-import  {createSlice} from '@reduxjs/toolkit'
+import  {createSlice} from '@reduxjs/toolkit';
 
 const cartslice = createSlice({
      name:"cartpopup",
@@ -17,4 +17,4 @@ const cartslice = createSlice({
 })
 
 export default cartslice.reducer
- export let{displyblock,displaynone}= cartslice.actions
+ export let{displyblock,displaynone} = cartslice.actions

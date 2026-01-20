@@ -7,10 +7,14 @@ import { IoCloseCircle } from "react-icons/io5";
 import {displaynone} from '../Component/store/cartslice'
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import {delectcart} from '../Component/store/cartmanage.js'
 function cart() {
-
+let cartrender = useSelector((stateadd)=>{return(stateadd.cartadd)})
+// cart popup
 let selector = useSelector((state)=>{return(state.cartpopup.isOpen)}) ;
 let dispatch = useDispatch()
+
+console.log(cartrender);
 
 let handlecolose = () => {
    dispatch(displaynone())
@@ -23,9 +27,12 @@ useEffect(() => {
   }
 }, [selector]);
 
+// handle delect the product 
+function  handledelectcart(id){
+  dispatch(delectcart(id))
+}
 
 
-console.log(selector)
 if(selector ){
 
     return (
@@ -38,37 +45,57 @@ if(selector ){
           <IoCloseCircle role="button" onClick={()=>{handlecolose()}} />  
           </div>
         </div>
-        <div className="body-cart ">
-          
-          <div className="img-cart">
-            <img src={whychoses} />
-          </div>
-
+        
+        {
+          cartrender.length==0?  <div className="emptycart">
+            <h4>Cart is empty</h4>
+          </div>:
+          cartrender.map((cartproduct)=>{
+     
+          return(
+          <div className="body-cart " key={cartproduct.id}>
          
-            <div className="adding-cart ">
-            <h5>Karasev (Jar)</h5>
-            <p>
-              Crispy gram flour sev blended with spices for a crunchy, tasty
-              snack.
-            </p>
+         <div className="img-cart">
+           <img src={cartproduct.image} />
+         </div>
+  
+        
+           <div className="adding-cart ">
+           <h5>{cartproduct.title}</h5>
+           <p>
+             {cartproduct.description}
+           </p>
+  
+           <div className="price">
+             <div className="adding-process">
+              
+               <FaRegWindowMinimize className="minus" />
+               20 <FaPlus />
+             </div>
+             <div>
+               <h5>{cartproduct.price}</h5>
+             </div>
+           </div>
+  
+         </div>
+  
+         <div className="delect-cart" role="button" onClick={()=>{
+          handledelectcart(cartproduct.id)
+         }} >
+           <CiSquareRemove />
+         </div>
+       </div>
+        )
+      
+          })
+        }
 
-            <div className="price">
-              <div className="adding-process">
-               
-                <FaRegWindowMinimize className="minus" />
-                20 <FaPlus />
-              </div>
-              <div>
-                <h5>200rs</h5>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="delect-cart">
-            <CiSquareRemove />
-          </div>
+     <div className="total-footer">
+         <div className="cartfooter">
+          <div className="checkout">checkout</div>
+          <div className="price">700.e</div>
         </div>
+     </div>
         
       </section>
       </div>
