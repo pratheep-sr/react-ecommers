@@ -9,14 +9,22 @@ import { Link } from "react-router-dom";
 import logo from "../assets/image/logo.jpg";
 import { CgProfile } from "react-icons/cg";
 import { FaCartArrowDown } from "react-icons/fa";
+import {useDispatch} from 'react-redux';
+import {displyblock} from '../Component/store/cartslice.js'
+  
 
 function Navigation() {
   let [store, setstore] = useState(false);
 
   // cart popup function
-  function cartpopup(){
+ let dispatch =  useDispatch();
+ 
+ function handlepopup(){
+
+    dispatch(displyblock())
     
   }
+
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -65,8 +73,8 @@ function Navigation() {
           </Nav>
         </Navbar.Collapse>
         <CgProfile className="profile" />
-        <div className="cart-button" onClick={cartpopup()}>
-          <Button variant="secondary" className="button">
+        <div className="cart-button" >
+          <Button variant="secondary" onClick={()=>{handlepopup()}} className="button">
             {" "}
             <FaCartArrowDown className="cart" />{" "}
             <span className="cart-cound">0</span>

@@ -8,7 +8,6 @@ import { BlinkBlur } from 'react-loading-indicators';
    
 let{product,error,isloading} = custom("https://eccommers.onrender.com/product")
 
-console.log(product);
 
 if(isloading){
 return(

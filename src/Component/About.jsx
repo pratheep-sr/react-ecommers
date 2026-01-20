@@ -14,7 +14,7 @@ function About(){
         <Aboutsection/>
         <Mission/>
         <Testmonial/>
-        <Cart/>
+       
         <Footer/>
          
          </>

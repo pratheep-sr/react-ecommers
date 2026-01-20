@@ -15,7 +15,7 @@ function Karasevinner() {
   const images = [img1, img2, img3, img4];
   let[weight,setweight] = useState("");
   let[cound,setcound] = useState(0);
-  console.log(weight);
+  // console.log(weight);
   
 
   const settings = {

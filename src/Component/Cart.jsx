@@ -2,13 +2,41 @@ import whychoses from "../assets/image/why-choose.png";
 import { FaPlus } from "react-icons/fa6";
 import { FaRegWindowMinimize } from "react-icons/fa";
 import { CiSquareRemove } from "react-icons/ci";
-
+import {useSelector} from 'react-redux';
+import { IoCloseCircle } from "react-icons/io5";
+import {displaynone} from '../Component/store/cartslice'
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 function cart() {
-  return (
-    <>
-      <section className="cart-section  ">
+
+let selector = useSelector((state)=>{return(state.cartpopup.isOpen)}) ;
+let dispatch = useDispatch()
+
+let handlecolose = () => {
+   dispatch(displaynone())
+}
+useEffect(() => {
+  if (selector) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [selector]);
+
+
+
+console.log(selector)
+if(selector ){
+
+    return (
+
+      <div className="total-cart ">
+        <section className="cart-section">
         <div className="header">
-          <h2>Welcom to cart</h2>
+          <div className="headerelement" >
+            <h2>Welcom to cart</h2>
+          <IoCloseCircle role="button" onClick={()=>{handlecolose()}} />  
+          </div>
         </div>
         <div className="body-cart ">
           
@@ -43,9 +71,11 @@ function cart() {
         </div>
         
       </section>
+      </div>
       
-    </>
+    
   );
+}
 }
 
 export default cart;
