@@ -11,10 +11,13 @@ import { CgProfile } from "react-icons/cg";
 import { FaCartArrowDown } from "react-icons/fa";
 import {useDispatch} from 'react-redux';
 import {displyblock} from '../Component/store/cartslice.js'
-  
+import {useSelector} from 'react-redux'
+
 
 function Navigation() {
   let [store, setstore] = useState(false);
+  let cartcound = useSelector((cartcound)=>{ return(cartcound.cartadd)})
+
 
   // cart popup function
  let dispatch =  useDispatch();
@@ -77,7 +80,7 @@ function Navigation() {
           <Button variant="secondary" onClick={()=>{handlepopup()}} className="button">
             {" "}
             <FaCartArrowDown className="cart" />{" "}
-            <span className="cart-cound">0</span>
+            <span className="cart-cound">{cartcound.length}</span>
           </Button>
         </div>
       </Container>

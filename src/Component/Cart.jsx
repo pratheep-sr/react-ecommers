@@ -8,6 +8,7 @@ import {displaynone} from '../Component/store/cartslice'
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import {delectcart} from '../Component/store/cartmanage.js'
+import Button from 'react-bootstrap/Button';
 function cart() {
 let cartrender = useSelector((stateadd)=>{return(stateadd.cartadd)})
 // cart popup
@@ -70,7 +71,7 @@ if(selector ){
              <div className="adding-process">
               
                <FaRegWindowMinimize className="minus" />
-               20 <FaPlus />
+               20 <FaPlus className="plus" />
              </div>
              <div>
                <h5>{cartproduct.price}</h5>
@@ -85,17 +86,26 @@ if(selector ){
            <CiSquareRemove />
          </div>
        </div>
-        )
-      
-          })
-        }
 
-     <div className="total-footer">
+      
+       
+        )
+        
+        
+          })
+
+          
+        }
+          { cartrender.length==0? null :
+            <div className="total-footer">
          <div className="cartfooter">
-          <div className="checkout">checkout</div>
-          <div className="price">700.e</div>
+             <Button variant="primary" className="inner-cartbutton" >Check out</Button>
+          <div className="footer-price">700.e</div>
         </div>
      </div>
+
+          }
+
         
       </section>
       </div>
