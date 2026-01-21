@@ -7,8 +7,20 @@ const cartmanage = createSlice({
    reducers:{
  
      addcart(state,action){
+
+    let checkingpush = state.find((state)=>{return(state.id == action.payload.id)})
+  
+    
+    if(checkingpush){
+     
+    checkingpush.cound+=1
       
-        state.push(action.payload)
+    }
+    else{
+      state.push({...action.payload,cound:1})
+    }
+
+       
      
      },
      delectcart(state,action){

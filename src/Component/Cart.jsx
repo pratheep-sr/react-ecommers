@@ -15,7 +15,6 @@ let cartrender = useSelector((stateadd)=>{return(stateadd.cartadd)})
 let selector = useSelector((state)=>{return(state.cartpopup.isOpen)}) ;
 let dispatch = useDispatch()
 
-console.log(cartrender);
 
 let handlecolose = () => {
    dispatch(displaynone())
@@ -32,6 +31,14 @@ useEffect(() => {
 function  handledelectcart(id){
   dispatch(delectcart(id))
 }
+
+// handle cart add
+function handlecartadd(){
+
+}
+
+
+console.log(cartrender);
 
 
 if(selector ){
@@ -70,8 +77,8 @@ if(selector ){
            <div className="price">
              <div className="adding-process">
               
-               <FaRegWindowMinimize className="minus" />
-               20 <FaPlus className="plus" />
+               <FaRegWindowMinimize onClick={()=>{handlecartadd()}} role="button" className="minus" />
+              {cartproduct.cound} <FaPlus className="plus" />
              </div>
              <div>
                <h5>{cartproduct.price}</h5>
