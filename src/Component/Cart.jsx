@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import {delectcart} from '../Component/store/cartmanage.js'
 import Button from 'react-bootstrap/Button';
+import {innerdelect,inneradd} from '../Component/store/cartmanage.js'
 function cart() {
 let cartrender = useSelector((stateadd)=>{return(stateadd.cartadd)})
 // cart popup
@@ -32,9 +33,15 @@ function  handledelectcart(id){
   dispatch(delectcart(id))
 }
 
-// handle cart add
-function handlecartadd(){
+// handle cart minus
+function handlecartminus(id){
+    dispatch(innerdelect(id))
+}
 
+// handle cart  add
+function handleadd(id){
+    
+  dispatch(inneradd(id))
 }
 
 
@@ -45,7 +52,7 @@ if(selector ){
 
     return (
 
-      <div className="total-cart ">
+      <div className="total-cart " >
         <section className="cart-section">
         <div className="header">
           <div className="headerelement" >
@@ -77,11 +84,11 @@ if(selector ){
            <div className="price">
              <div className="adding-process">
               
-               <FaRegWindowMinimize onClick={()=>{handlecartadd()}} role="button" className="minus" />
-              {cartproduct.cound} <FaPlus className="plus" />
+               <FaRegWindowMinimize onClick={()=>{handlecartminus(cartproduct.id)}} role="button" className="minus" />
+              {cartproduct.cound} <FaPlus className="plus" role="button"  onClick={()=>{handleadd(cartproduct.id)}} />
              </div>
              <div>
-               <h5>{cartproduct.price}</h5>
+               <h5>₹{cartproduct.price}.00</h5>
              </div>
            </div>
   
