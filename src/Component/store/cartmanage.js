@@ -20,8 +20,8 @@ const cartmanage = createSlice({
     checkingpush.price = checkingpush.cound * checkingpush.setprice
    
     }
-    else{
-      state.push({...action.payload,cound:1, setprice:current, price:current 
+    else  {
+      state.push({...action.payload,cound:action.payload.cound||1, setprice:current, price:current 
 
       })
     }

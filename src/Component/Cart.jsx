@@ -43,6 +43,22 @@ function handleadd(id){
     
   dispatch(inneradd(id))
 }
+   
+// total cart calculate
+
+
+    let totalvalue = cartrender.reduce((accumlater,celement)=>{
+    return accumlater+celement.price
+  },0)
+
+
+console.log(totalvalue);
+
+
+
+
+
+
 
 
 console.log(cartrender);
@@ -85,13 +101,15 @@ if(selector ){
              <div className="adding-process">
               
                <FaRegWindowMinimize onClick={()=>{handlecartminus(cartproduct.id)}} role="button" className="minus" />
-              {cartproduct.cound} <FaPlus className="plus" role="button"  onClick={()=>{handleadd(cartproduct.id)}} />
+              {cartproduct.cound}Kg <FaPlus className="plus" role="button"  onClick={()=>{handleadd(cartproduct.id)}} />
              </div>
              <div>
-               <h5>₹{cartproduct.price}.00</h5>
+               <h5>₹{cartproduct.price}.00
+                
+               </h5>
              </div>
            </div>
-  
+         
          </div>
   
          <div className="delect-cart" role="button" onClick={()=>{
@@ -114,11 +132,13 @@ if(selector ){
             <div className="total-footer">
          <div className="cartfooter">
              <Button variant="primary" className="inner-cartbutton" >Check out</Button>
-          <div className="footer-price">700.e</div>
+          <div className="footer-price">₹{totalvalue}.00</div>
         </div>
      </div>
 
           }
+       
+   
 
         
       </section>
