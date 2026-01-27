@@ -20,7 +20,7 @@ function Karasevinner() {
   function handleinnerproduct(){
 dispatch(addcart(product))
 }
- let[weight,setweight] = useState(0);
+ let[weight,setweight] = useState(2);
 
   let product={
       id: "1",
@@ -28,7 +28,7 @@ dispatch(addcart(product))
     description: "Crispy gram flour sev blended with spices for a crunchy, tasty snack.",
     image: "https://eccommers.onrender.com/images/1.jpg",
     price: "85",
-    cound: weight,
+    cound: Number(weight),
     rating: { rate: 3.9, count: 120 }
   }
 console.log(product);
@@ -94,7 +94,7 @@ console.log(product);
                <h4>Select Kg</h4>
               <div className="total-section" >
                 <label>Select kg : </label>
-                <select className="select"  value={weight} onChange={(e)=>setweight(e.target.value)} >
+                <select className="select"  value={weight} onChange={(e)=>setweight(Number((e.target.value)))} >
                   <option value={2}>2Kg</option>
                   <option value={3}>3Kg</option>
                   <option value={5}>5Kg</option>
