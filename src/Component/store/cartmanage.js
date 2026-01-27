@@ -20,8 +20,10 @@ const cartmanage = createSlice({
     checkingpush.price = checkingpush.cound * checkingpush.setprice
    
     }
+   
     else  {
-      state.push({...action.payload,cound:Number(action.payload.cound)||1, setprice:current, price:current 
+     
+      state.push({...action.payload,cound:Number(action.payload.cound)||1, setprice:current, price:current* Number(action.payload.cound)
 
       })
     }
@@ -61,13 +63,29 @@ inneradd(state,action){
        
         
         
-     }
+     },
+
+    updateinnerproducts(state,action){
+
+   let updateinner = state.find((item)=>{
+    return ( item.id==action.payload.id)
+   })
+     
+if(updateinner){
+  updateinner.cound +=action.payload.newweight-1;
+  updateinner.price = updateinner.setprice * action.payload.newweight
+  
+  
+}
+   
 
 
+    }
+     
 
    }
 
 })
 
 export default cartmanage.reducer
-export let{addcart,delectcart,innerdelect,inneradd} = cartmanage.actions
+export let{addcart,delectcart,innerdelect,inneradd ,updateinnerproducts} = cartmanage.actions

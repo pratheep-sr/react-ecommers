@@ -7,7 +7,7 @@ import img3 from "../assets/image/inner3.jpg";
 import img4 from "../assets/image/inner4.jpg";
 import Button from 'react-bootstrap/Button';
 import {useDispatch} from 'react-redux'
-import {addcart} from '../Component/store/cartmanage.js'
+import {addcart,updateinnerproducts} from '../Component/store/cartmanage.js'
 
 
 
@@ -27,12 +27,23 @@ dispatch(addcart(product))
     title: "Karasev (Jar)",
     description: "Crispy gram flour sev blended with spices for a crunchy, tasty snack.",
     image: "https://eccommers.onrender.com/images/1.jpg",
-    price: "85",
+    price: "80",
     cound: Number(weight),
     rating: { rate: 3.9, count: 120 }
   }
 console.log(product);
 
+// uddate function 
+function handleupdate(weight){
+  setweight(weight)
+
+
+  
+  dispatch(updateinnerproducts({
+    id:product.id,
+    newweight: weight
+  }))
+}
 
   const images = [img1, img2, img3, img4];
  
@@ -94,7 +105,7 @@ console.log(product);
                <h4>Select Kg</h4>
               <div className="total-section" >
                 <label>Select kg : </label>
-                <select className="select"  value={weight} onChange={(e)=>setweight(Number((e.target.value)))} >
+                <select className="select"  value={weight} onChange={(e)=>handleupdate(Number((e.target.value)))} >
                   <option value={2}>2Kg</option>
                   <option value={3}>3Kg</option>
                   <option value={5}>5Kg</option>
