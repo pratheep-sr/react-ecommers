@@ -23,7 +23,7 @@ const cartmanage = createSlice({
    
     else  {
      
-      state.push({...action.payload,cound:Number(action.payload.cound)||1, setprice:current, price:current* Number(action.payload.cound)
+      state.push({...action.payload,cound:Number(action.payload.cound)||1, setprice:current, price:current* Number(action.payload.cound)|| current
 
       })
     }
